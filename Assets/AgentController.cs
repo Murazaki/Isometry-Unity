@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof (NavMeshAgent))]
+[RequireComponent (typeof (UnityEngine.AI.NavMeshAgent))]
 public class AgentController : MonoBehaviour {
-	private NavMeshAgent agent;
+	private UnityEngine.AI.NavMeshAgent agent;
 	private GameObject pointer;
 	
 	public GameObject pointerPrefab;
 	public Camera mainCamera;
 	
     void Start() {
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 		pointer = (GameObject)Instantiate(pointerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
     }
     void Update() {
